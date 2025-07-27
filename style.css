@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@font-face {
+    font-family: 'Pokemon';
+    src: url(./assets/fonts/Pokemon\ Solid.ttf);
+}
+
 :root {
     --identity-primary: #dc0a2d;
 
     --grayscale-dark: #212121;
     --grayscale-medium: #666666;
     --grayscale-light: #e0e0e0;
-    --grayscale-background: #efefef;
-    --grayscale-white: #fff;
+    --grayscale-background: #d6d6d6;
+    --grayscale-white: #f1f1f1;
     --font-color-black-white: #000;
 
     --headline-font-size: 40px;
@@ -35,8 +42,8 @@
     --grayscale-dark: #dedede;
     --grayscale-medium: #666666;
     --grayscale-light: #e0e0e0;
-    --grayscale-background: #0f0f0f;
-    --grayscale-white: #000;
+    --grayscale-background: #2c2c2c;
+    --grayscale-white: #1f1f1f;
     --font-color-black-white: #fff;
 
     --headline-font-size: 40px;
@@ -73,6 +80,9 @@ h4,
 h1 {
     font-size: var(--headline-font-size);
     line-height: var(--headline-line-height);
+    letter-spacing: 4px;
+    font-family: 'Pokemon';
+    font-weight: 600;
 }
 
 h2 {
@@ -149,8 +159,12 @@ body {
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
-    /* font-family: ; */
+    font-family: "Nunito", sans-serif;
     overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .main {
@@ -177,19 +191,26 @@ body {
 .logo-wrapper {
     display: flex;
     align-items: center;
+    margin-top: -10px;
 }
 
 .logo-wrapper>h1 {
-    color: var(--grayscale-white);
+    color: #fff;
+}
+
+.dark-mode .logo-wrapper>h1 {
+    color: #121212;
 }
 
 .logo-wrapper>img {
     margin-right: 16px;
-    width: 35px;
+    width: 38px;
+    filter: invert(0);
+    margin-bottom: -17px;
 }
 
 .dark-mode .logo-wrapper>img {
-    filter: invert(1);
+    filter: invert(0.92);
 }
 
 .search-wrapper,
@@ -314,7 +335,7 @@ body {
     background-color: var(--grayscale-white);
     box-shadow: var(--drop-shadow-inner);
     border-radius: 0.75rem;
-    height: calc(80% - 1rem);
+    height: calc(81.5% - 1rem);
     width: calc(100% - 1rem);
     /* max-height: 100px; */
     overflow-y: auto;
@@ -357,18 +378,18 @@ body {
     border-radius: 7px;
     background-color: var(--grayscale-background);
     padding: 24px 8px 4px 8px;
-    min-height: 36px;
+    min-height: 32px;
     color: var(--grayscale-dark);
-    margin-top: -16px;
+    margin-top: -20px;
 }
 
 .list-item .name-wrap>p {
-    margin-top: 4px;
+    margin-top: 0;
 }
 
 .list-item .img-wrap {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     margin: auto;
 }
 
@@ -402,8 +423,12 @@ body {
     max-height: 32px;
 }
 
-.dark-mode .detail-main .back-btn-wrap img {
-    filter: invert(1);
+.detail-main .back-btn {
+    margin-top: 10px;
+}
+
+.dark-mode .detail-main .back-btn {
+    filter: invert(0.92);
 }
 
 .detail-main .back-btn-wrap path,
@@ -413,15 +438,20 @@ body {
     color: var(--grayscale-white);
 }
 
+.detail-main .header-wrapper h1 {
+    letter-spacing: 7px;
+}
+
 .detail-main .pokemon-id-wrap p {
     font-weight: var(--font-weight-bold);
 }
 
 .detail-img-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     margin: auto;
     position: relative;
+    bottom: -10px;
     z-index: 3;
 }
 
@@ -578,7 +608,7 @@ body {
 }
 
 .dark-mode .detail-bg {
-    filter: invert(1);
+    filter: invert(0.92);
 }
 
 div#not-found-message {
