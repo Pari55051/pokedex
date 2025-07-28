@@ -3,12 +3,14 @@ Pokedex web-app using the PokeAPI.
 
 Some days ago, I made a project named "Who's That Pokemon" (You can check it out on my github, link: https://github.com/Pari55051/whos-that-pokemon ). From which I found out about many new Pokemons. This made me curious about exploring Pokemons, thus I made it to learn about more Pokemons.
 
+## Live Demo
+See my project at: [https://pari55051.github.io/pokedex/](https://pari55051.github.io/pokedex/)
 
-## All Pokemons Preview
+## All Pokemons Page Screenshot
 ![preview_light](./assets/preview_light_mode.png)
 ![preview_dark](./assets/preview_dark_mode.png)
 
-## Pokemon Details Page Preview
+## Pokemon Details Page Screenshot
 ![preview_details_light](./assets/preview_poke_details_light.png)
 ![preview_details_dark](./assets/preview_poke_details_dark.png)
 
